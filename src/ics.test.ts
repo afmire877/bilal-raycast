@@ -65,16 +65,16 @@ describe("parseEvents", () => {
 
   it("should read the event link", () => {
     const [dhuhr] = parseEvents(
-      feed(event("SUMMARY:Dhuhr", "DTSTART:20261027T123000Z", "URL:https://bilalathan.co.uk/calendar?m=mosque-000168")),
+      feed(event("SUMMARY:Dhuhr", "DTSTART:20261027T123000Z", "URL:https://bilalathan.co.uk/calendar?m=mosque-000123")),
     );
 
-    expect(dhuhr.url).toBe("https://bilalathan.co.uk/calendar?m=mosque-000168");
+    expect(dhuhr.url).toBe("https://bilalathan.co.uk/calendar?m=mosque-000123");
   });
 
   it("should read the mosque coordinates", () => {
-    const [dhuhr] = parseEvents(feed(event("SUMMARY:Dhuhr", "DTSTART:20261027T123000Z", "GEO:51.535936;0.07722")));
+    const [dhuhr] = parseEvents(feed(event("SUMMARY:Dhuhr", "DTSTART:20261027T123000Z", "GEO:51.5;-0.12")));
 
-    expect(dhuhr.geo).toEqual({ lat: 51.535936, lon: 0.07722 });
+    expect(dhuhr.geo).toEqual({ lat: 51.5, lon: -0.12 });
   });
 
   it("should read a quoted time zone", () => {

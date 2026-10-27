@@ -24,11 +24,11 @@ describe("upcoming", () => {
 
 describe("formatCountdown", () => {
   it("should show minutes under an hour", () => {
-    expect(formatCountdown(23 * 60_000)).toBe("23m");
+    expect(formatCountdown(23 * 60_000)).toBe("23 min");
   });
 
   it("should show hours and minutes over an hour", () => {
-    expect(formatCountdown(125 * 60_000)).toBe("2h 5m");
+    expect(formatCountdown(125 * 60_000)).toBe("2 hr 5 min");
   });
 
   it("should show now when under a minute", () => {
@@ -44,15 +44,19 @@ describe("leaveLabel", () => {
   const leaveAt = at("2026-10-26T14:30:00Z");
 
   it("should count down to the leave-by time", () => {
-    expect(leaveLabel(leaveAt, at("2026-10-26T14:00:00Z"))).toBe("Leave in 30m");
+    expect(leaveLabel(leaveAt, at("2026-10-26T14:00:00Z"))).toBe("Leave in 30 min");
   });
 
   it("should say time to go in the final minute before leaving", () => {
     expect(leaveLabel(leaveAt, at("2026-10-26T14:29:30Z"))).toBe("Time to go");
   });
 
+  it("should still say time to go when compact", () => {
+    expect(leaveLabel(leaveAt, at("2026-10-26T14:29:30Z"), LabelStyle.Compact)).toBe("Time to go");
+  });
+
   it("should drop the wording when compact", () => {
-    expect(leaveLabel(leaveAt, at("2026-10-26T14:00:00Z"), LabelStyle.Compact)).toBe("30m");
+    expect(leaveLabel(leaveAt, at("2026-10-26T14:00:00Z"), LabelStyle.Compact)).toBe("30 min");
   });
 });
 

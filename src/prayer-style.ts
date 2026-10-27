@@ -1,13 +1,17 @@
 import { Icon, Image } from "@raycast/api";
 import { Prayer } from "./prayer";
 
-const STYLES: Record<Prayer, { icon: Icon; tint: { light: string; dark: string } }> = {
-  [Prayer.Fajr]: { icon: Icon.Sunrise, tint: { light: "#9B6FB8", dark: "#C9A0DC" } },
-  [Prayer.Dhuhr]: { icon: Icon.Sun, tint: { light: "#C98F00", dark: "#F5C242" } },
-  [Prayer.Jumuah]: { icon: Icon.Sun, tint: { light: "#2E8B57", dark: "#4CC38A" } },
-  [Prayer.Asr]: { icon: Icon.CloudSun, tint: { light: "#C9701F", dark: "#F0A35E" } },
-  [Prayer.Maghrib]: { icon: Icon.Moonrise, tint: { light: "#C4452F", dark: "#F07A62" } },
-  [Prayer.Isha]: { icon: Icon.Moon, tint: { light: "#4A5BC4", dark: "#8C9BF2" } },
+type Tint = { light: string; dark: string };
+
+export const BILAL_PEACH: Tint = { light: "#A9765A", dark: "#DBB49D" };
+
+const STYLES: Record<Prayer, { icon: Icon; tint: Tint }> = {
+  [Prayer.Fajr]: { icon: Icon.Sunrise, tint: { light: "#7E6A93", dark: "#B9A8CC" } },
+  [Prayer.Dhuhr]: { icon: Icon.Sun, tint: { light: "#9C7A2E", dark: "#E3C78A" } },
+  [Prayer.Jumuah]: { icon: Icon.Sun, tint: { light: "#5E7A62", dark: "#A9C2A6" } },
+  [Prayer.Asr]: { icon: Icon.CloudSun, tint: { light: "#9A6B45", dark: "#D9A77E" } },
+  [Prayer.Maghrib]: { icon: Icon.Moonrise, tint: { light: "#9C5848", dark: "#D18D7B" } },
+  [Prayer.Isha]: { icon: Icon.Moon, tint: { light: "#56637F", dark: "#97A3BE" } },
 };
 
 export function prayerIcon(prayer: Prayer | undefined): Image.ImageLike {

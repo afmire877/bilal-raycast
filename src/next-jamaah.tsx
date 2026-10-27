@@ -16,7 +16,7 @@ import { useCallback, useEffect, useState } from "react";
 import type { JamaahEvent } from "./ics";
 import { directionsTo, Links } from "./links";
 import { Prayer, PRAYERS } from "./prayer";
-import { prayerIcon } from "./prayer-style";
+import { BILAL_PEACH, prayerIcon } from "./prayer-style";
 import { formatCountdown, formatTime, groupByDay, isTimeToGo, leaveLabel, leaveTime } from "./schedule";
 import { useJamaah } from "./use-jamaah";
 
@@ -130,7 +130,7 @@ function JamaahItem({ event, now, minutes, showingDetail, onToggleDetail, onRefr
   const leaveAt = leaveTime(event, minutes);
   const directions = directionsTo(event);
   const leaveTag = {
-    tag: { value: leaveLabel(leaveAt, now), color: isTimeToGo(leaveAt, now) ? Color.Orange : Color.SecondaryText },
+    tag: { value: leaveLabel(leaveAt, now), color: isTimeToGo(leaveAt, now) ? BILAL_PEACH : Color.SecondaryText },
   };
   const timing = [
     { text: `in ${formatCountdown(event.start.getTime() - now.getTime())}` },

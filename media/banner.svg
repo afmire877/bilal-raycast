@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5A6261"/>
+      <stop offset="0.35" stop-color="#3F4442"/>
+      <stop offset="0.7" stop-color="#20221D"/>
+      <stop offset="1" stop-color="#191B17"/>
+    </linearGradient>
+    <radialGradient id="haze" cx="0.3" cy="0" r="0.9">
+      <stop offset="0" stop-color="#8A9592" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#8A9592" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="lift" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#sky)"/>
+  <rect width="1280" height="640" fill="url(#haze)"/>
+
+  <g font-family="'Iowan Old Style', 'New York', Georgia, serif" fill="#F0EEE4">
+    <text x="96" y="104" font-size="36">Bilal <tspan fill="#BAC0B1">for Raycast</tspan></text>
+    <text x="92" y="292" font-size="92" letter-spacing="-2">Leave in 12 min</text>
+  </g>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Helvetica, Arial, sans-serif">
+    <text x="96" y="196" font-size="22" fill="#BAC0B1">Asr jama'ah · <tspan fill="#F0EEE4" font-weight="600">14:45</tspan></text>
+    <text x="96" y="342" font-size="22" fill="#BAC0B1">Your mosque's times, in your menu bar.</text>
+    <rect x="96" y="384" width="560" height="1" fill="#F0EEE4" opacity="0.14"/>
+
+    <text x="96" y="428" font-size="21" font-weight="600" fill="#F0EEE4">Leave by 14:30</text>
+    <text x="656" y="428" font-size="19" fill="#DBB49D" text-anchor="end">Change time away</text>
+    <text x="96" y="460" font-size="18" fill="#BAC0B1">15 min for wudu and the walk</text>
+
+    <rect x="96" y="494" width="560" height="72" rx="10" fill="#DBB49D"/>
+    <rect x="584" y="494" width="1" height="72" fill="#242C21" opacity="0.12"/>
+    <text x="124" y="538" font-size="22" font-weight="500" fill="#242C21">Take me there</text>
+    <path d="M612 542 L630 524 M616 524 H630 V538" fill="none" stroke="#242C21" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <g filter="url(#lift)" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Helvetica, Arial, sans-serif">
+    <rect x="770" y="70" width="414" height="42" rx="11" fill="#191B17" opacity="0.9"/>
+    <g transform="translate(790 80)" fill="none" stroke="#D9A77E" stroke-width="2.2" stroke-linecap="round">
+      <circle cx="9" cy="8" r="5"/>
+      <path d="M2 20 H18 M9 0 V-1"/>
+    </g>
+    <text x="820" y="98" font-size="17" fill="#F0EEE4">Asr · Leave in 12 min</text>
+    <text x="1160" y="98" font-size="15" fill="#BAC0B1" text-anchor="end">14:18</text>
+
+    <rect x="770" y="124" width="414" height="368" rx="14" fill="#22241F"/>
+    <rect x="770.5" y="124.5" width="413" height="367" rx="14" fill="none" stroke="#F0EEE4" stroke-opacity="0.08"/>
+
+    <text x="794" y="160" font-size="13" fill="#BAC0B1" letter-spacing="0.4">Next jama'ah</text>
+    <text x="794" y="196" font-family="'Iowan Old Style', 'New York', Georgia, serif" font-size="26" fill="#F0EEE4">Asr  14:45</text>
+    <text x="1160" y="195" font-size="16" fill="#DBB49D" text-anchor="end">Leave in 12 min</text>
+    <rect x="794" y="218" width="366" height="1" fill="#F0EEE4" opacity="0.1"/>
+
+    <text x="794" y="250" font-size="13" fill="#BAC0B1" letter-spacing="0.4">Today's jama'ah</text>
+    <circle cx="800" cy="279" r="6" fill="#D18D7B"/>
+    <text x="816" y="285" font-size="17" fill="#F0EEE4">Maghrib</text>
+    <text x="1160" y="285" font-size="15" fill="#BAC0B1" text-anchor="end">16:44 · leave 16:29</text>
+    <circle cx="800" cy="315" r="6" fill="#97A3BE"/>
+    <text x="816" y="321" font-size="17" fill="#F0EEE4">Isha</text>
+    <text x="1160" y="321" font-size="15" fill="#BAC0B1" text-anchor="end">18:15 · leave 18:00</text>
+    <rect x="794" y="342" width="366" height="1" fill="#F0EEE4" opacity="0.1"/>
+
+    <text x="794" y="374" font-size="13" fill="#BAC0B1" letter-spacing="0.4">Tomorrow</text>
+    <circle cx="800" cy="403" r="6" fill="#B9A8CC"/>
+    <text x="816" y="409" font-size="17" fill="#F0EEE4">Fajr</text>
+    <text x="1160" y="409" font-size="15" fill="#BAC0B1" text-anchor="end">05:40 · leave 05:25</text>
+    <circle cx="800" cy="439" r="6" fill="#E3C78A"/>
+    <text x="816" y="445" font-size="17" fill="#F0EEE4">Dhuhr</text>
+    <text x="1160" y="445" font-size="15" fill="#BAC0B1" text-anchor="end">12:30 · leave 12:15</text>
+  </g>
+</svg>
