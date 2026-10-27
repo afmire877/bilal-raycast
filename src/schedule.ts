@@ -15,7 +15,7 @@ export function formatCountdown(ms: number): string {
 
   const hours = Math.floor(totalMinutes / MINUTES_PER_HOUR);
   const minutes = totalMinutes % MINUTES_PER_HOUR;
-  return hours ? `${hours}h ${minutes}m` : `${minutes}m`;
+  return hours ? `${hours} hr ${minutes} min` : `${minutes} min`;
 }
 
 export enum LabelStyle {
@@ -24,11 +24,10 @@ export enum LabelStyle {
 }
 
 export function leaveLabel(leaveAt: Date, now: Date, style = LabelStyle.Full): string {
-  const compact = style === LabelStyle.Compact;
-  if (isTimeToGo(leaveAt, now)) return compact ? "Go" : "Time to go";
+  if (isTimeToGo(leaveAt, now)) return "Time to go";
 
   const countdown = formatCountdown(leaveAt.getTime() - now.getTime());
-  return compact ? countdown : `Leave in ${countdown}`;
+  return style === LabelStyle.Compact ? countdown : `Leave in ${countdown}`;
 }
 
 export function isTimeToGo(leaveAt: Date, now: Date): boolean {

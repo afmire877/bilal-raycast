@@ -1,5 +1,4 @@
 import {
-  Color,
   environment,
   getPreferenceValues,
   Icon,
@@ -13,12 +12,12 @@ import {
 import { useEffect } from "react";
 import type { JamaahEvent } from "./ics";
 import { directionsTo, Links } from "./links";
-import { prayerIcon } from "./prayer-style";
+import { BILAL_PEACH, prayerIcon } from "./prayer-style";
 import { formatTime, groupByDay, isTimeToGo, LabelStyle, leaveLabel, leaveSummary, leaveTime } from "./schedule";
 import { useJamaah } from "./use-jamaah";
 
 const MENU_ITEMS = 5;
-const timeToGoIcon = { source: Icon.Footprints, tintColor: Color.Orange };
+const timeToGoIcon = { source: Icon.Footprints, tintColor: BILAL_PEACH };
 
 export default function Command() {
   const now = new Date();
@@ -43,7 +42,7 @@ export default function Command() {
         <MenuBarExtra.Item
           title="Couldn't load your calendar link"
           subtitle={error.message}
-          icon={{ source: Icon.Warning, tintColor: Color.Orange }}
+          icon={{ source: Icon.Warning, tintColor: BILAL_PEACH }}
           onAction={openExtensionPreferences}
         />
       )}
