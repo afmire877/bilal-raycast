@@ -1,0 +1,129 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "bilal",
+  "title": "Bilal",
+  "description": "Unofficial companion for Bilal: next jama'ah countdown from your mosque's calendar link",
+  "icon": "icon.png",
+  "author": "ahmedmire",
+  "categories": [
+    "Productivity"
+  ],
+  "license": "MIT",
+  "platforms": [
+    "macOS"
+  ],
+  "preferences": [
+    {
+      "name": "calendarUrl",
+      "title": "Calendar Link",
+      "description": "Copy from bilalathan.co.uk/calendar → \"Copy the calendar link\"",
+      "type": "textfield",
+      "required": true,
+      "placeholder": "webcal://… or https://…"
+    },
+    {
+      "name": "leaveMinutes",
+      "title": "Time Away",
+      "description": "Wudu and walking there before jama'ah",
+      "type": "dropdown",
+      "required": false,
+      "default": "15",
+      "data": [
+        {
+          "title": "0 minutes",
+          "value": "0"
+        },
+        {
+          "title": "5 minutes",
+          "value": "5"
+        },
+        {
+          "title": "10 minutes",
+          "value": "10"
+        },
+        {
+          "title": "15 minutes",
+          "value": "15"
+        },
+        {
+          "title": "20 minutes",
+          "value": "20"
+        },
+        {
+          "title": "30 minutes",
+          "value": "30"
+        },
+        {
+          "title": "45 minutes",
+          "value": "45"
+        }
+      ]
+    },
+    {
+      "name": "trayTitle",
+      "title": "Menu Bar Title",
+      "description": "How much the menu bar shows",
+      "type": "dropdown",
+      "required": false,
+      "default": "full",
+      "data": [
+        {
+          "title": "Prayer and countdown",
+          "value": "full"
+        },
+        {
+          "title": "Countdown only",
+          "value": "compact"
+        }
+      ]
+    }
+  ],
+  "commands": [
+    {
+      "name": "next-jamaah",
+      "title": "Next Jama'ah",
+      "description": "Upcoming jama'ah by day, with when to leave",
+      "mode": "view"
+    },
+    {
+      "name": "menu-bar",
+      "title": "Jama'ah Countdown",
+      "description": "Countdown to when you should leave, in the menu bar",
+      "mode": "menu-bar",
+      "interval": "1m"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^2.9.0",
+    "@raycast/utils": "^2.3.3"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.0.4",
+    "@types/node": "22.13.10",
+    "@types/react": "19.0.10",
+    "eslint": "^9.22.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.2.4"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "lint": "ray lint",
+    "test": "vitest run",
+    "fix-lint": "ray lint --fix",
+    "publish": "npx @raycast/api@latest publish"
+  },
+  "keywords": [
+    "prayer",
+    "salah",
+    "salat",
+    "namaz",
+    "jamaah",
+    "jamaat",
+    "mosque",
+    "masjid",
+    "athan",
+    "islam"
+  ]
+}
